@@ -4,7 +4,7 @@ import {useState} from "react"
 import { authService } from 'fbase';
 
 function App() {
-  const [init, setInit]=useState(false);
+  const [init, setInit]=useState(false); //앱이 시작하면 로그인이 된상태인지 확인후 component요소 반환
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(()=>{
     authService.onAuthStateChanged((user)=>{
